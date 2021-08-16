@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+/*fixed-header-start*/
+ body{
+     font-family: 'Poppins', sans-serif;
+     color:ghostwhite;
+     margin:0;
+     background: linear-gradient(62deg, #303234 0%, #202021 100%);
+     background-size:100% 100%;}
+
+    #navbar{
+        color:ghostwhite;
+        display:flex;
+        position: fixed;
+        top:0;
+        left:0;
+        min-height:50px;
+        background-color: #28282a;
+        background-size: contain;
+        flex-direction: row;
+        width:100%;
+        justify-content: flex-end;
+        margin:auto;
+        font-size:18px;
+    }
+        #nav{
+            margin:30px;
+        }
+        .nav-link{
+            padding:15px;
+            margin:10px;
+            color:ghostwhite;
+            box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+            4px 4px 6px rgba(0, 0, 0, 0.2),
+            inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+            inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        a:link {
+        text-decoration: none;
+        }
+
+/*fixed-header-end*/
+/*welcome -section-start*/
+
+    #welcome-section{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        height: 100vh;
+        background:url("images/back1.jpg");
+        background-size: 100% 100%;
+        width:100%;
+        object-fit:fill;
+        margin:0;
+    }
+    .cl-headings{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        margin:20px 200px 20px 0;
+        color:ghostwhite;
+    }
+    .pops{
+        align-self:flex-start;
+        margin:0;
+        font-size:35px;
+        font-weight:300;
+        text-shadow: 2px 2px 3px #000000;
+        animation:slideMe 1s ease-out;
+    }
+    .designer{align-self:flex-start;
+        margin:10px;
+        font-size:25px;
+        font-weight:300;
+        text-shadow: 2px 2px 3px #000000;
+        animation:slideMetoo 1s ease-out;}
+
+    @keyframes slideMe {
+        0%{ transform:translateX(-200px);}
+    }
+    @keyframes slideMetoo {
+        0%{ transform:translateX(200px);}
+    }
+
+    .welcome-image {
+        height: 90vh;
+        width:43%;
+        background:url("images/1.png");
+        background-size: 100% 100%;
+    }
+
+    .welcome-image:hover{ background:url("images/2.png");
+        background-size: 100% 100%;}
+
+/*welcome -section-end*/
+/*project-section-start*/
+/*glow-effect-start*/
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 80px;
+        width: 80px;
+        z-index: 100;
+    }
+
+    .letters{
+        font-family: 'Poppins', sans-serif;
+        height: 80px;
+        width: 80px;
+        background: #262626;
+        color: #555;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 46px;
+        font-weight:900;
+        cursor: pointer;
+        margin:4px;
+        box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+        4px 4px 6px rgba(0, 0, 0, 0.2),
+        inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+        inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="checkbox"]:checked ~ div {
+        box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+        inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+        color: yellow;
+        text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+        animation: glow 1.5s linear infinite;
+    }
+
+    @keyframes glow {
+        0% {
+            filter: hue-rotate(0deg);
+        }
+        100% {
+            filter: hue-rotate(360deg);
+        }
+    }
+    label{display:none;}
+/*glow-effect-end*/
+    .project-containers{
+        background: #212121;
+        box-shadow: 3px 3px 7px #1c1c1c;
+        border-radius: 2px;
+        width:100%;
+    }
+    #project-grid{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 50px 50px;
+        margin:20px}
+
+@media(max-width:800px){ #project-grid{
+    display: grid;
+    grid-template-columns:auto;
+    grid-gap: 50px;
+    margin:30px;}}
+
+    .project-image{
+        width:100%;
+    }
+    p{
+        color:ghostwhite;
+    }
+/*project-section-end*/
+    #contact{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        background: #2b2b2c;
+        padding:40px 0 40px 0;
+
+    }
+
+    #profile-link{
+        width:50%;
+        margin:0;
+    }
+
+    .git{
+        width:30%;
+        align-items:center;
+        margin:0;
+    }
+
+    .git:hover{
+        width:32%;
+        transition:0.3s;
+    }
+
+    .find-me{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    #profile-link{
+        display:flex;
+        justify-content:center;
+        align-items:center;}
+
+    .project-title{
+        text-align:center;
+        font-size:20px;
+        transition:0.1s;
+        margin-left:60px;
+        margin-right:60px;
+    }
+    .project-title:hover{
+        background:#2b2b2c;
+        box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+        inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+
+
+    }
+
+    footer{
+        display:flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        margin:0;
+        background-color: #212121;
+        padding:10px;
+    }
+
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <title>Personal Portfolio</title>
+</head>
+<body>
+<main>
+    <header id="navbar">
+        <nav id="nav">
+            <a class="nav-link" href="#welcome-section">About</a>
+            <a class="nav-link" href="#projects">Work</a>
+            <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="welcome-section" class="welcome-section-two">
+        <div class="welcome-image">
+        </div>
+        <div class="cl-headings">
+            <h1 class="pops">I am Poppy</h1>
+            <h2 class="designer">a front-end designer</h2>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="glow-header">
+                <ul id="glow-effect">
+                <li>
+                    <label for="p"></label>
+                    <input id="p" type="checkbox" name="project-check" >
+                    <div class="letters">P</div>
+                </li>
+                <li>
+                    <label for="r"></label>
+                    <input id="r" type="checkbox" name="project-check">
+                    <div class="letters">R</div>
+                </li>
+                <li>
+                    <label for="o"></label>
+                    <input id="o" type="checkbox" name="project-check">
+                    <div class="letters">O</div>
+                </li>
+                <li>
+                    <label for="j"></label>
+                    <input id="j" type="checkbox" name="project-check">
+                    <div class="letters">J</div>
+                </li>
+                <li>
+                    <label for="e"></label>
+                    <input id="e" type="checkbox"  name="project-check">
+                    <div class="letters">E</div>
+                </li>
+                <li>
+                    <label for="c"></label>
+                    <input id="c" type="checkbox">
+                    <div class="letters">C</div>
+                </li>
+                <li>
+                    <label for="t"></label>
+                    <input id="t" type="checkbox">
+                    <div class="letters">T</div>
+                </li>
+                <li>
+                    <label for="s"></label>
+                    <input id="s" type="checkbox">
+                    <div class="letters">S</div>
+                </li>
+            </ul>
+        </div>
+        <div id="project-grid">
+            <a class="project-containers" href="https://pseisaki.github.io/product_landing_page_tutorial/" target="_blank">
+                <img src="images/product_landing.jpg" alt="project" class="project-image">
+                <p class="project-title">Product Landing Page</p>
+            </a>
+            <a class="project-containers" href="https://pseisaki.github.io/survey_form_tutorial/" target="_blank">
+                <img src="images/survey.jpg" alt="project" class="project-image">
+                <p class="project-title">Survey Form Page</p>
+            </a>
+            <a class="project-containers" href="https://pseisaki.github.io/technical_documentation_page/" target="_blank">
+                <img src="images/documentation.jpg" alt="project" class="project-image">
+                <p class="project-title">Technical Documentation Page</p>
+            </a>
+            <a class="project-containers" href="https://pseisaki.github.io/tribute_page_tutorial/" target="_blank">
+                <img src="images/tribute.jpg" alt="project" class="project-image">
+                <p class="project-title">Tribute Page</p>
+            </a>
+        </div>
+    </section>
+    <section id="contact">
+        <h2 id="contact-p">Let's Work Together!</h2>
+        <div class="find-me">
+            <p>You can find me on</p>
+            <a id="profile-link" href="https://github.com/pseisaki" target="_blank">
+                <img class="git" src="images/github.png" alt="git">
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>**This portfolio is fake, created only for learning reasons.</p>
+    </footer>
+
+</main>
+
+</body>
+</html>
